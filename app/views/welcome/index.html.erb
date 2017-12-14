@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+    <%= csrf_meta_tags %>  
+    <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "sample app", '#', id: "logo" %>
+        <nav>
+          <ul" class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   '#' %></li>
+            <li> <%= link_to 'micropost', microposts_path %></li>
+            <li><%= link_to 'User',users_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container"> 	
+      <%= yield %>
+      <h3 >Welcome to the Sample App</h3>
+    	<p >this is the home page for the Ruby on Rails Tutorial Sample Application</p>
+    	<button>Ruby on Rails</button>
+    	<br>
+    	<img style="height:100px;width: 100px; " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV9VV2gDzRPIfhw8w8NZGdEjN7GDqNpdF43V295fxS5HMGzhEd">
+    	<img alt="Rails logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWHmZ0NHh6h8p24y6NsqYda2w-MY2xtUf_rsAyl4NT7G5CHd0_A" />
+  </body>
+</html>
